@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/site.css">
+    </head>
+    <body>
+        <div data-bind="foreach: courses">
+            <div class="courseInfo">
+                <b>COURSE:</b>
+                <span data-bind="text: name"></span> <span class="show">+</span>
+                <div data-bind="foreach: assignments" class="assignmentInfo hide">
+                    - <span data-bind="text: name"></span> <br />
+                </div>
+            </div>
+        </div>
+
+        <h2>viewModel</h2>
+        <textarea name="" id="" cols="60" rows="10" data-bind="text: ko.toJSON($data)"></textarea>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="http://knockoutjs.com/downloads/knockout-3.4.0.js"></script>
+        <script src="../js/app.js"></script>
+    </body>
+</html>
